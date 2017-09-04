@@ -13,6 +13,5 @@ func RunApi (p string) {
 		v1.GET("/gpuinfo",gpu_stats.GetGpuInfo)
 
 	}
-	println(":%s",p)
 	r.Run(":"+p)
 }
