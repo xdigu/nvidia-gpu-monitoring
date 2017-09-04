@@ -19,7 +19,7 @@ func main() {
 }
 ```
 
-To check stats of your gpu in JSON:
+you can check stats of your gpu in JSON:
 
 ```
 localhost:8080/v1/gpuinfo
