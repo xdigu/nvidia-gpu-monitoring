@@ -38,12 +38,13 @@ type GpuClock struct {
 func GetGpuInfo(c *gin.Context){
 	out, err := exec.Command("nvidia-smi", "-q", "-x").Output()
 
-	var gpu Query
-	err = xml.Unmarshal(out, &gpu)
+	
 
 	if err != nil {
 		log.Println(err)
 	}else {
+		var gpu Query
+		err = xml.Unmarshal(out, &gpu)
 		format := c.Query("format")
 
 		if format == "xml"{
