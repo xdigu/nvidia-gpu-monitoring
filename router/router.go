@@ -7,6 +7,7 @@ import (
 func RunApi (p string) {
 
 	r := gin.Default()
+	r.Use(CORS())
 
 	v1 := r.Group("/v1")
 	{
